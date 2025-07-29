@@ -7,5 +7,5 @@ document.addEventListener('DOMContentLoaded', function() {
     const usernameInput = document.getElementById('username');
     const usernameInput = document.getElementById('email');
     const usernameInput = document.getElementById('password');
-    
+    Input.value = Input.value.trim();
 })
