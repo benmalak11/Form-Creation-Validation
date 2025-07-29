@@ -4,4 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
     }
     document.getElementById('form-feedback');
+    const usernameInput = document.getElementById('username');
+    const usernameInput = document.getElementById('email');
+    const usernameInput = document.getElementById('password');
+    
 })
