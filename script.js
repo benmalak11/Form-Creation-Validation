@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailValue = email.value.trim();
         const passwordValue = password.value.trim();
 
-        let messages = ['username is requerde', 'email is requerde', 'password is requerde']
+        let messages = ['username is requerde', 'email is requerde', 'password is requerde'];
+        let push = [];
+        let isValid = [];
         if usernameValue == '' {
             setError(username, 'username is requerde');
         }
