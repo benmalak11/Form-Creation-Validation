@@ -21,15 +21,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailValue = email.value.trim();
         const passwordValue = password.value.trim();
 
-        let messages = ['username is requerde', 'email is requerde', 'password is requerde'];
-        let push = [];
-        let isValid = [];
-        if usernameValue == '' {
-            setError(username, 'username is requerde');
+        let messages = [];
+        let isValid = true;
+        
+        if (username.length < 3) {
+            isValid = false;
+            messages.push ("Username must be at least 3 characters long.");
         }
-        else if { 
-
+        if (!email.includes ("@") || !email.includes (".")) {
+            isValid = false;
+            messages.push ("Please enter a valid email address.");
         }
+        if (password.length < 8) {
+            isValid = false;
+            messages,push ("Password must be at least 8 characters long.");
+        }
+    }
+    feedbackDiv.style.display = "block";
+    if (isValid) {
+      feedbackDiv.textContent = "Registration successful!";
+      feedbackDiv.style.color = "#28a745"; // Green
+    } else {
+      feedbackDiv.innerHTML = messages.join("<br>");
+      feedbackDiv.style.color = "#dc3545"; // Red
     }
 
 })
