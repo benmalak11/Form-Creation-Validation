@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const usernameValue = username.value.trim();
         const emailValue = email.value.trim();
         const passwordValue = password.value.trim();
+
+        let messages = ['username is requerde', 'email is requerde', 'password is requerde']
         if usernameValue == '' {
-            setError(username, 'message');
+            setError(username, 'username is requerde');
         }
-        else {
+        else if { 
 
         }
     }
